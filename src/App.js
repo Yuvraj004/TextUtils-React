@@ -25,11 +25,19 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor='#042743';
       showAlert("Dark mode has been enabled","success");
+      document.title='TextUtils-Dark Mode';
+      // setInterval(()=>{
+      //   document.title='TextUtils-is coming';
+      // },2000)
+      // setInterval(()=>{
+      //   document.title='TextUtils-is op';
+      // },1500) 
     }
     else{
       setMode('light');
       document.body.style.backgroundColor='white';
       showAlert("Light mode has been enabled","success");
+      document.title='TextUtils-Light Mode';
     }
   }
   return (
@@ -37,9 +45,9 @@ function App() {
     <>
     <Navbar title= "Reactlearn" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert} />
-    <div className="container">
+    {/* <div className="container">
     <TextForm showAlert={showAlert} heading="Enter text to analyze" mode={mode}/>
-    </div>
+    </div> */}
     <About mode={mode}/>
     {/* <h1>Hello {name}</h1> */}
     <div className="App">
