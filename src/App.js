@@ -5,6 +5,12 @@ import TextForm from './components/TextForm';
 import About from './components/About';
 import { useState } from 'react';
 import Alert from './components/Alert';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+}from "react-router-dom";
 
 //JSX is javascript syntax extension writing js into html using curly brackets
 let name = "Harry";
