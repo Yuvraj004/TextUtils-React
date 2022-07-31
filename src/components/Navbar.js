@@ -32,10 +32,6 @@ export default function Navbar(data) {
               <a className="nav-link disabled" href='/'>Disabled</a>
             </li>
           </ul>
-          {/* <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button className="btn btn-outline-success" type="submit">Search</button>
-          </form> */}
           <div className={`form-check form-switch text-${data.mode==='light'?'dark':'light'}`}>
             <input className="form-check-input" onClick={data.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable DarkMode</label>
@@ -49,6 +45,3 @@ export default function Navbar(data) {
 Navbar.propTypes={
     title:PropTypes.string.isRequired
 };
-// Navbar.defaultProps{
-//     title:'God Knows',
-// }
