@@ -39,14 +39,14 @@ export default function TextForm(data) {
       <div className="mb-3">
         <textarea className="form-control" value={text} style={{backgroundColor:data.mode==='light'?'white':'grey',color:data.mode==='dark'?'white':'grey'}} onChange={handleOnChange} id="myBox" rows="3"></textarea>
       </div>
-      <button className='btn btn-primary mx-2' onClick={handleUpClick}>Convert to Upper case</button>
-      <button className='btn btn-primary mx-2' onClick={handleLowClick}>Convert to Lower case</button>
-      <button className='btn btn-primary mx-2' onClick={handleCopy}>Copy Text</button>
-      <button className='btn btn-primary mx-2'onClick={handleClear}>Clear Text</button>
+      <button className='btn btn-primary mx-2 my-1' onClick={handleUpClick}>Convert to Upper case</button>
+      <button className='btn btn-primary mx-2 my-1' onClick={handleLowClick}>Convert to Lower case</button>
+      <button className='btn btn-primary mx-2 my-1' onClick={handleCopy}>Copy Text</button>
+      <button className='btn btn-primary mx-2 my-1'onClick={handleClear}>Clear Text</button>
     </div>
     <div className="container my-3" style={{color:data.mode==='dark'?'white':'grey'}}>
       <h2>Your text summary</h2>
-      <p>{text.length} characters and {text.split(" ").length} words</p>
+      <p>{text.length} characters and {text.split(" ").filter((e)=>{return e.length!=0}).length} words</p>
       <p>{0.008*text.split(" ").length} Minutes read</p>
     </div>
     </>

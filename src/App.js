@@ -39,9 +39,10 @@ function App() {
   }
   return (
     <>
-    <Alert alert={alert}/>
+    
     <div className="container my-3">
       <Router>
+        <Alert alert={alert}/>
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()}/>
         <Routes>
               <Route exact path="/about"
