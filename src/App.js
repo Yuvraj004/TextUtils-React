@@ -9,7 +9,8 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-
+import Message from './components/Message';
+import Greet from './components/Greet';
  
 function App() {
   const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
@@ -42,7 +43,9 @@ function App() {
     
     <div className="container my-3">
       <Router>
+        
         <Alert alert={alert}/>
+        
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} key={new Date()}/>
         <Routes>
               <Route exact path="/about"
@@ -50,6 +53,12 @@ function App() {
               </Route>
               <Route exact path="/" element={
                 <TextForm showAlert={showAlert} heading="Try TextUtils - word counter,spaces" mode={mode}/>}>
+              </Route>
+              <Route exact path="/greet"
+                element={<Greet name={"Diana"} heroName={"Wonder"}/>}>
+              </Route>
+              <Route exact path="/message"
+                element={<Message/>}>
               </Route>
         </Routes>
       </Router>

@@ -46,7 +46,7 @@ export default function TextForm(data) {
     </div>
     <div className="container my-3" style={{color:data.mode==='dark'?'white':'grey'}}>
       <h2>Your text summary</h2>
-      <p>{text.length} characters and {text.split(" ").filter((e)=>{return e.length!=0}).length} words</p>
+      <p>{text.length} characters and {text.split(" ").filter((e)=>{return e.length!==0}).length} words</p>
       <p>{0.008*text.split(" ").length} Minutes read</p>
     </div>
     </>
