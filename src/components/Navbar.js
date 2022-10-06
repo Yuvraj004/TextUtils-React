@@ -26,8 +26,8 @@ export default function Navbar(data) {
             </li>
           </ul>
           <div className={`form-check form-switch text-${data.mode==='light'?'dark':'light'}`}>
-            <input className="form-check-input" onClick={data.toggleMode} type="checkbox" role="switch" aria-checked="mixed" id="flexSwitchCheckDefault"/>
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable DarkMode</label>
+            <input className="form-check-input" onClick={data.toggleMode}type="checkbox" role="switch" aria-checked="mixed" id="flexSwitchCheckDefault"/>
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable {data.mode==='light'?'Dark':'Light'}Mode</label>
           </div>
         </div>
       </div>
